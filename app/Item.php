@@ -13,8 +13,8 @@ class Item extends Model
         'value',
         'category',
         'subcategory',
-        'collection_id',
         'tags',
+        'collection_id',
     ];
 
     /**
@@ -26,6 +26,7 @@ class Item extends Model
         'value' => 'integer',
         'category' => 'string',
         'subcategory' => 'string',
+        'tags' => 'array',
         'collection_id' => 'integer',
     ];
 }
