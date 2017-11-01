@@ -14,8 +14,8 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         // Let's clear the users table first
-        // DB::table('users')->delete();
-        User::truncate();
+        DB::table('users')->delete();
+        //User::truncate();
 
         $faker = \Faker\Factory::create();
 
