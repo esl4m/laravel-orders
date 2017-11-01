@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-    public $table= 'items';
+    protected $table= 'items';
     protected $fillable = [
         'name',
         'qnt',
@@ -29,4 +29,12 @@ class Item extends Model
         'tags' => 'array',
         'collection_id' => 'integer',
     ];
+
+    /**
+     * The orders that belong to the item.
+     */
+    public function orders()
+    {
+        return $this->belongsToMany('App\Order');
+    }
 }
