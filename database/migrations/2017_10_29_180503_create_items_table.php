@@ -15,14 +15,20 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
+            // $table->integer('order_id')->unsigned()->nullable();
             $table->string('name');
             $table->integer('qnt');
             $table->integer('value');
             $table->string('category');
             $table->string('subcategory');
+            $table->json('tags');
             $table->integer('collection_id');
             $table->timestamps();
         });
+
+        // Schema::table('items', function($table) {
+        //    $table->foreign('order_id')->references('id')->on('orders');
+        // });
     }
 
     /**

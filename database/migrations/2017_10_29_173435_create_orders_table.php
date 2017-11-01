@@ -21,6 +21,10 @@ class CreateOrdersTable extends Migration
             $table->string('payment_method');
             $table->timestamps();
         });
+
+        Schema::table('orders', function($table) {
+            $table->foreign('email')->references('email')->on('users');
+        });
     }
 
     /**
