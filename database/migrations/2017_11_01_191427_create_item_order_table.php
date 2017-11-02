@@ -20,19 +20,6 @@ class CreateItemOrderTable extends Migration
             $table->integer('order_id')->unsigned();
             $table->integer('item_id')->unsigned();
             $table->integer('quantity')->unsigned()->nullable();
-//            $table->primary(['order_id', 'item_id']);
-
-//            $table->foreign('item_id')
-//                ->references('id')->on('items')
-//                ->onDelete('cascade');
-//
-//            $table->foreign('order_id')
-//                ->references('id')->on('orders')
-//                ->onDelete('cascade');
-
-
-//            $table->foreign('item_id')->references('id')->on('items');
-//            $table->foreign('order_id')->references('id')->on('orders');
         });
 
         Schema::enableForeignKeyConstraints();
