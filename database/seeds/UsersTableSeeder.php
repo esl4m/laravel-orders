@@ -15,7 +15,6 @@ class UsersTableSeeder extends Seeder
     {
         // Let's clear the users table first
         DB::table('users')->delete();
-        //User::truncate();
 
         $faker = \Faker\Factory::create();
 
