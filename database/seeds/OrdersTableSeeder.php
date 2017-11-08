@@ -14,7 +14,6 @@ class OrdersTableSeeder extends Seeder
     public function run()
     {
         // Truncate existing records to start from scratch.
-        // Order::truncate();
         DB::table('orders')->delete();
 
         $faker = \Faker\Factory::create();
@@ -29,6 +28,5 @@ class OrdersTableSeeder extends Seeder
                 'payment_method' => $faker->text,
             ]);
         }
-        // factory(App\Order::class, 10)->create();
     }
 }
