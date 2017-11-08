@@ -14,7 +14,6 @@ class ItemsTableSeeder extends Seeder
     public function run()
     {
         // Truncate existing records to start from scratch.
-        // Item::truncate();
         DB::table('items')->delete();
 
         $faker = \Faker\Factory::create();
@@ -29,7 +28,6 @@ class ItemsTableSeeder extends Seeder
                 'subcategory' => $faker->word,
                 'collection_id' => $faker->numberBetween(0, 1264),
                 'tags' => $faker->shuffleArray(["porsche", "design"]),
-                // 'order_id' => Order::all()->pluck('id')->random(),
             ]);
 
             $item_create -> orders() -> attach(Order::all()->random());
