@@ -16,7 +16,6 @@ class CreateItemOrderTable extends Migration
         Schema::disableForeignKeyConstraints();
 
         Schema::create('item_order', function (Blueprint $table) {
-//            $table->increments('id');
             $table->integer('order_id')->unsigned();
             $table->integer('item_id')->unsigned();
             $table->integer('quantity')->unsigned()->nullable();
