@@ -21,7 +21,6 @@ class OrdersTableSeeder extends Seeder
         // And now, let's create a few Orders in our database:
         for ($i = 0; $i < 50; $i++) {
             Order::create([
-                // 'email' => $faker->email,
                 'email' => User::all()->pluck('email')->random(),
                 'total_amount_net' => $faker->text,
                 'shipping_costs' => $faker->text,

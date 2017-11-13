@@ -17,7 +17,6 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->delete();
 
         $faker = \Faker\Factory::create();
-
         $password = Hash::make('test');
 
         User::create([

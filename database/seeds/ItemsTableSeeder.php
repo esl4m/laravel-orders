@@ -29,7 +29,6 @@ class ItemsTableSeeder extends Seeder
                 'collection_id' => $faker->numberBetween(0, 1264),
                 'tags' => $faker->shuffleArray(["porsche", "design"]),
             ]);
-
             $item_create -> orders() -> attach(Order::all()->random());
         }
     }
