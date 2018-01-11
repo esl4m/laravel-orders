@@ -11,13 +11,23 @@
 Laravel API app for orders and it's items.
 <br>
 To run the app you 
-just need to go to your vagrant homestead and cd to your folder then :
-- php artisan migrate
-- php artisan db:seed (to add dummy values in db)
 <br>
-open postman and in the GET request url add (YOUR_DOMAIN/api/v1/orders/) 
-or add order id like (YOUR_DOMAIN/api/v1/orders/2)
+just need to go to your vagrant homestead
 <br>
+cd to your folder then :
+```
+php artisan migrate
+php artisan db:seed (to add dummy values in db)
+```
+<br>
+open postman and in the GET request url 
+<br>
+add: (YOUR_DOMAIN/api/v1/orders/)
+<br>
+or add order id:
+(YOUR_DOMAIN/api/v1/orders/2)
+
+<br><br>
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
